@@ -12,9 +12,8 @@ estresse(){
 	voltar 
 }
 pross(){ clear ; echo ; echo "Teste de velocidade de processamento" ; echo ; echo "Para parar o teste de velocidade de processamento pressione CTRL+C" ; echo ; sysbench --test=cpu --cpu-max-prime=9999 run ; echo ; voltar ; }
-sair(){ exit 0 ; }
-voltar(){ read -p "Pressione [enter] para voltar ao menu 'Teste de CPU'" ; cpumenu ; }
-menu(){ . dialog.sh ; }
+voltar(){ read -p "Pressione [enter] para voltar ao menu 'Teste de CPU'" ; /usr/share/testaralho/cpu.sh ; }
+menu(){ /usr/share/testaralho/dialog.sh ; }
 while : ; do
 resposta=$(
 dialog --stdout \
@@ -34,7 +33,6 @@ case $resposta in
 	1) estresse ;;
 	2) pross  ;;
 	3) menu   ;;
-	4) sair   ;;
 esac
 
 done

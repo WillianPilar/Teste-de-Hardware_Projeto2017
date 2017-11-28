@@ -1,9 +1,8 @@
 #!/bin/bash
 velo(){ clear ; echo ; echo "Teste de velocidade do Hard Disk (HD)" ; echo ; hdparm -tT /dev/sda ; voltar1 ; }
 leitura(){ clear ; echo ; echo "Teste de leitura do Hard Disk (HD)" ; echo ; hdparm -t --offset 250 /dev/sda1 ; voltar1 ; }
-voltar(){ . dialog.sh ; }
-sair(){ exit 0 ; }
-voltar1(){ . hdteste.sh ; }
+voltar(){ /usr/share/testaralho/dialog.sh ; }
+voltar1(){ /usr/share/testaralho/hdteste.sh ; }
 while : ; do
 resposta=$(
 dialog --stdout \
@@ -23,7 +22,6 @@ case $resposta in
 	1) velo ;;
 	2) leitura ;;
 	3) voltar ;;
-	4) sair ;;
 esac
 
 done

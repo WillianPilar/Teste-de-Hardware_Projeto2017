@@ -6,8 +6,7 @@ cpu(){ clear ; echo "Informações sobre o processador" ; head 19 /proc/cpuinfo 
 ram(){ clear ; echo "Informações sobre memoria RAM" ; free -m ; echo ; voltar1 ;}
 hd(){ clear ; echo "Informações sobre o Hard Disk (HD)" ; df -h ; voltar1 ;}
 placa(){ clear ; echo "Informações sobre a placa mãe" ; lshw -class system ; voltar1 ; }
-voltar(){ . dialog.sh ; }
-sair(){ exit 0 ; }
+voltar(){ /usr/share/testaralho/dialog.sh ; }
 while : ; do
 
 # Mostra o menu na tela, com as ações disponíveis
@@ -39,7 +38,6 @@ case $resposta in
 	5) hd     ;;
 	6) placa  ;;
 	7) voltar ;;
-	8) sair   ;;
 esac
 
 done

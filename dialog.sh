@@ -1,10 +1,10 @@
 #!/bin/bash
-memoria(){ . testememoria.sh ; }
-cpu(){ . cpu.sh ; }
-hd(){ . hdteste.sh ; }
-diagnostico(){ . diagnostico.sh ; }
+memoria(){ /usr/share/testaralho/testememoria.sh ; }
+cpu(){ /usr/share/testaralho/cpu.sh ; }
+hd(){ /usr/share/testaralho/hdteste.sh ; }
+diagnostico(){ /usr/share/testaralho/diagnostico.sh ; }
 sair(){ exit 0 ; clear ; }
-internet(){ . internet.sh ; }
+internet(){ /usr/share/testaralho/internet.sh ; }
 while : ; do
 
 # Mostra o menu na tela, com as ações disponíveis
