@@ -43,7 +43,7 @@ cp -R /usr/lib/cgi-bin /usr/lib/cgi-bin.bkp
 cp -R ./html /var/www
 cp -R ./cgi-bin /usr/lib
 mkdir -p /usr/share/testaralho
-cp ./scripts/programa/* /usr/share/testaralho
+cp ./programa/pg* /usr/share/testaralho
 ln -s /usr/share/testaralho/dialog.sh /usr/bin/testaralho
 echo "____________________________"
 echo
