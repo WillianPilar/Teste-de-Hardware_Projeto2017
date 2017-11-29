@@ -9,4 +9,4 @@ apt-get autoremove -y
 
 rm -rf /usr/lib/cgi-bin/* /var/www/html/* /usr/bin/testaralho /usr/share/testaralho
 clear
-echo terminou
+echo "O programa foi removido com sucesso."
