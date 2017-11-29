@@ -11,7 +11,6 @@ dialog --stdout \
 0 0 10 \
 1 "\Z7Teste de velocidade da internet" \
 2 "\Z7Voltar ao menu" \
-3 "\Z7Sair" \
 )
 
 [ $? -ne 0 ] && break

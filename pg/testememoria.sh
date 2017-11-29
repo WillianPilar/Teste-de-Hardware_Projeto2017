@@ -12,7 +12,7 @@ dialog --stdout \
 0 0 0 \
 1 "\Z7Teste de memória RAM" \
 2 "\Z7Menu anterior" \
-3 "\Z7Sair")
+)
 
 [ $? -ne 0 ] && break
 

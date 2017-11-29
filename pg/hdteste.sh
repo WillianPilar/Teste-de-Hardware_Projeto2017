@@ -13,7 +13,6 @@ dialog --stdout \
 1 "\Z7Teste de velocidade" \
 2 "\Z7Teste de leitura" \
 3 "\Z7Voltar ao menu" \
-4 "\Z7Sair" \
 )
 
 [ $? -ne 0 ] && break

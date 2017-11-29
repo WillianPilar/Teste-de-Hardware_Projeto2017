@@ -24,7 +24,6 @@ dialog --stdout \
 1 "\Z7Teste de stress da CPU" \
 2 "\Z7Teste de velocidade de processamento" \
 3 "\Z7Voltar ao menu principal" \
-4 "\Z7Sair" \
 )
 
 [ $? -ne 0 ] && break

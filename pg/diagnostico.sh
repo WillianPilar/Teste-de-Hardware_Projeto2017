@@ -23,7 +23,7 @@ dialog --stdout \
 5 '\Z7informações sobre o Hard Disk(HD)' \
 6 '\Z7Informações sobre a placa-mãe' \
 7 '\Z7Voltar ao menu' \
-8 '\Z7Sair' )
+)
 
 # Ela apertou CANCELAR ou ESC, então vamos sair...
 [ $? -ne 0 ] && break
