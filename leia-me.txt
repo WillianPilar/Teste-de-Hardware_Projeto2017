@@ -65,7 +65,7 @@
 #  Willian Pilar                                                           #
 #  Kevin Benevides                                                         #
 #  Carlos Magno                                                            #
-#  Victor Taboni                                                           #
+#  Vitor Taboni                                                            #
 #                                                                          #
 # Obrigador por utilizar o programa 'Takewic fast tester'!                 #
 ############################################################################
