@@ -7,6 +7,7 @@ ram(){ clear ; echo "Informações sobre memória RAM" ; free -m ; echo ; voltar
 hd(){ clear ; echo "Informações sobre o Hard Disk (HD)" ; df -h ; voltar1 ;}
 placa(){ clear ; echo "Informações sobre a placa mãe" ; lshw -class system ; voltar1 ; }
 while : ; do
+voltar(){ break 2 ; /usr/share/takewic/menu.sh ; }
 
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
@@ -35,7 +36,7 @@ case $resposta in
 	4) ram    ;;
 	5) hd     ;;
 	6) placa  ;;
-	7) exit 0 ;;
+	7) voltar ;;
 esac
 
 done

@@ -43,7 +43,7 @@ cp -R /usr/lib/cgi-bin /usr/lib/cgi-bin.bkp
 cp -R ./html /var/www
 cp -R ./cgi-bin /usr/lib
 mkdir -p /usr/share/takewic
-cp ./FastTester/* /usr/share/takewic
+cp ./.FastTester/* /usr/share/takewic
 ln -s /usr/share/takewic/menu.sh /usr/bin/takewic
 echo "____________________________"
 echo
