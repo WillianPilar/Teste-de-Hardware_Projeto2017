@@ -12,17 +12,16 @@ while : ; do
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
 dialog --stdout \
---colors \
---title '\Z7Teste de Memória Ram' \
---menu '\Z7Escolha a quantidade de memória que deseja testar' \
+--title 'Teste de Memória Ram' \
+--menu 'Escolha a quantidade de memória que deseja testar' \
 0 0 10 \
-1 '\Z71024MB 1(GB)' \
-2 '\Z72048MB 2(GB)' \
-3 '\Z74096MB 4(GB)' \
-4 '\Z78192MB 8(GB)' \
-5 '\Z715200MB 16(GB)' \
-6 '\Z730000MB 32(GB)' \
-7 '\Z7Voltar' \
+1 '1024MB 1(GB)' \
+2 '2048MB 2(GB)' \
+3 '4096MB 4(GB)' \
+4 '8192MB 8(GB)' \
+5 '15200MB 16(GB)' \
+6 '30000MB 32(GB)' \
+7 'Voltar' \
 )
 
 # Ela apertou CANCELAR ou ESC, então vamos sair...

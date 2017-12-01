@@ -11,9 +11,8 @@ while : ; do
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
 dialog --stdout \
---colors \
---title '\Z7Diagnostico de Hardware' \
---menu '\Z7Escolha uma das opções' \
+--title 'Diagnostico de Hardware' \
+--menu 'Escolha uma das opções' \
 0 0 10 \
 1 '\Z7Dispositivos USB' \
 2 '\Z7Dispositivos PCI' \

@@ -5,12 +5,11 @@ while : ; do
 
 OPZAO=$(
 dialog --stdout \
---colors \
---title '\Z7Teste de Memoria Ram' \
---menu '\Z7Escolha uma das opções' \
+--title 'Teste de Memoria Ram' \
+--menu 'Escolha uma das opções' \
 0 0 0 \
-1 "\Z7Teste de memória RAM" \
-2 "\Z7Menu anterior" \
+1 "Teste de memória RAM" \
+2 "Menu anterior" \
 )
 
 [ $? -ne 0 ] && break

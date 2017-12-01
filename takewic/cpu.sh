@@ -16,9 +16,8 @@ voltar(){ read -p "Pressione [enter] para voltar ao menu 'Teste de CPU'" ; /usr/
 while : ; do
 resposta=$(
 dialog --stdout \
---colors \
---title '\Z7Diagnostico de Hardware' \
---menu '\Z7Escolha uma das opções' \
+--title 'Diagnostico de Hardware' \
+--menu 'Escolha uma das opções' \
 0 0 10 \
 1 "\Z7Teste de stress da CPU" \
 2 "\Z7Teste de velocidade de processamento" \
