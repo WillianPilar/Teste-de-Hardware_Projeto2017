@@ -2,7 +2,8 @@
 esc(){
 	escolha=$(for x in $(fdisk -l 2> /dev/null | grep 'Disk /dev' | cut -d" " -f2 | cut -b1-8) ; do
  echo $x' "-"' ; done)
-	var=$(dialog --stdout --menu "Escolha uma opção " 0 0 0 $escolha)
+	var=$(dialog --stdout --menu "Escolha uma opção:" 0 0 0 $escolha)
+
 }
 veloo(){ 
 	esc  
@@ -25,15 +26,15 @@ leitu(){
 	voltar1
 }
 voltar(){ 
-	/usr/share/testaralho/dialog.sh 
+	/usr/share/takewic/dialog.sh 
 }
 voltar1(){ 
-	/usr/share/testaralho/hdteste.sh 
+	/usr/share/takewic/hdteste.sh 
 }
 while : ; do
 	rep=$(dialog --stdout 			\
-	--title 'Teste de Hard Disco(HD)' 	\
-	--menu 'Escolha uma das opções' 	\
+	--title 'Teste de Hard Disk (HD)' 	\
+	--menu 'Escolha uma das opções:' 	\
 	0 0 0 					\
 	1 "Teste de velocidade" 		\
 	2 "Teste de leitura" 			\

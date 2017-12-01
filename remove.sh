@@ -7,6 +7,6 @@ done
 
 apt-get autoremove -y
 
-rm -rf /usr/lib/cgi-bin/* /var/www/html/* /usr/bin/testaralho /usr/share/testaralho
+rm -rf /usr/lib/cgi-bin/* /var/www/html/* /usr/bin/takewic /usr/share/takewic
 clear
 echo "O programa foi removido com sucesso."

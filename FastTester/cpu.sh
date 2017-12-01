@@ -12,16 +12,16 @@ estresse(){
 	voltar 
 }
 pross(){ clear ; echo ; echo "Teste de velocidade de processamento" ; echo ; echo "Para parar o teste de velocidade de processamento pressione CTRL+C" ; echo ; sysbench --test=cpu --cpu-max-prime=9999 run ; echo ; voltar ; }
-voltar(){ read -p "Pressione [enter] para voltar ao menu 'Teste de CPU'" ; /usr/share/testaralho/cpu.sh ; }
+voltar(){ read -p "Pressione [enter] para voltar ao menu 'Teste de CPU'" ; /usr/share/takewic/cpu.sh ; }
 while : ; do
 resposta=$(
 dialog --stdout \
 --title 'Diagnostico de Hardware' \
 --menu 'Escolha uma das opções' \
 0 0 10 \
-1 "\Z7Teste de stress da CPU" \
-2 "\Z7Teste de velocidade de processamento" \
-3 "\Z7Voltar ao menu principal" \
+1 "Teste de stress da CPU" \
+2 "Teste de velocidade de processamento" \
+3 "Voltar ao menu principal" \
 )
 
 [ $? -ne 0 ] && break

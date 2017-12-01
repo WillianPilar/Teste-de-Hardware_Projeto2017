@@ -1,9 +1,9 @@
 #!/bin/bash
-voltar1(){ read -p "Pressione [enter] para ir ao menu de diagnostico" ; diagnostico.sh ; }
+voltar1(){ read -p "Pressione [enter] para ir ao menu de diagnostico" ; /usr/share/takewic/diagnostico.sh ; }
 usb(){ clear ; echo "Lista dos dispositivos USB" ; lsusb ;  voltar1 ; }
 pci(){ clear ; echo "Lista dos dispositivos PCI" ; lspci ; voltar1 ; }
 cpu(){ clear ; echo "Informações sobre o processador" ; head 19 /proc/cpuinfo ; voltar1 ; }
-ram(){ clear ; echo "Informações sobre memoria RAM" ; free -m ; echo ; voltar1 ;}
+ram(){ clear ; echo "Informações sobre memória RAM" ; free -m ; echo ; voltar1 ;}
 hd(){ clear ; echo "Informações sobre o Hard Disk (HD)" ; df -h ; voltar1 ;}
 placa(){ clear ; echo "Informações sobre a placa mãe" ; lshw -class system ; voltar1 ; }
 while : ; do
@@ -11,16 +11,16 @@ while : ; do
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
 dialog --stdout \
---title 'Diagnostico de Hardware' \
---menu 'Escolha uma das opções' \
+--title 'Diagnóstico dos Hardwares' \
+--menu 'Escolha uma das opções:' \
 0 0 10 \
-1 '\Z7Dispositivos USB' \
-2 '\Z7Dispositivos PCI' \
-3 '\Z7informações da CPU' \
-4 '\Z7Informações sobre a Memoria Ram' \
-5 '\Z7informações sobre o Hard Disk(HD)' \
-6 '\Z7Informações sobre a placa-mãe' \
-7 '\Z7Voltar ao menu' \
+1 'Dispositivos USB' \
+2 'Dispositivos PCI' \
+3 'Informações da CPU' \
+4 'Informações sobre a Memoria Ram' \
+5 'Informações sobre o Hard Disk(HD)' \
+6 'Informações sobre a placa-mãe' \
+7 'Voltar ao menu' \
 )
 
 # Ela apertou CANCELAR ou ESC, então vamos sair...

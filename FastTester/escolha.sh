@@ -5,7 +5,7 @@ quatro(){ memtester 4096 1 ; parar ; }
 oito(){ memtester 8192 1 ; parar ; }
 dez(){ memtester 15000 ; parar ; }
 trinta(){ memtester 30000 ; parar ;}
-parar(){ read -p "Pressione [enter] para voltar para o menu 'teste de Memória Ram'" ; exit 0 ; }
+parar(){ read -p "Pressione [enter] para voltar para o menu 'teste de Memória Ram'" ; /usr/share/takewic/testememoria.sh ; }
 voltar(){ exit 0 ; }
 while : ; do
 
@@ -13,7 +13,7 @@ while : ; do
 resposta=$(
 dialog --stdout \
 --title 'Teste de Memória Ram' \
---menu 'Escolha a quantidade de memória que deseja testar' \
+--menu 'Escolha a quantidade de memória que deseja testar:' \
 0 0 10 \
 1 '1024MB 1(GB)' \
 2 '2048MB 2(GB)' \
