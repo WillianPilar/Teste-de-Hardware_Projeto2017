@@ -26,10 +26,10 @@ leitu(){
 	voltar1
 }
 voltar(){ 
-	/usr/share/takewic/dialog.sh 
-}
+	. /usr/share/takewic/menu.sh 
+}i
 voltar1(){ 
-	/usr/share/takewic/hdteste.sh 
+	. /usr/share/takewic/hdteste.sh 
 }
 while : ; do
 	rep=$(dialog --stdout 			\
@@ -43,6 +43,6 @@ while : ; do
 	case $rep in
 		1) veloo ;;
 		2) leitu ;;
-		3) exit 0 ;;
+		3) voltar ;;
 	esac
 done

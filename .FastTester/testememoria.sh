@@ -1,6 +1,6 @@
 #!/bin/bash
-voltar(){ read -p "Pressione [enter] para voltar ao menu" ; /usr/share/takewic/testememoria.sh ; }
-teste(){ /usr/share/takewic/escolha.sh ; }
+voltar(){ . /usr/share/takewic/menu.sh ; }
+teste(){ . /usr/share/takewic/escolha.sh ; }
 while : ; do
 
 OPZAO=$(
@@ -16,7 +16,7 @@ dialog --stdout \
 
 case $OPZAO in
 	1) teste   ;;
-	2) exit 0  ;;
+	2) voltar  ;;
 esac
 
 done

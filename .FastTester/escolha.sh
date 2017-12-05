@@ -5,8 +5,8 @@ quatro(){ memtester 4096 1 ; parar ; }
 oito(){ memtester 8192 1 ; parar ; }
 dez(){ memtester 15000 ; parar ; }
 trinta(){ memtester 30000 ; parar ;}
-parar(){ read -p "Pressione [enter] para voltar para o menu 'teste de Memória Ram'" ; /usr/share/takewic/testememoria.sh ; }
-voltar(){ exit 0 ; }
+parar(){ read -p "Pressione [enter] para voltar para o menu 'teste de Memória Ram'" ; . /usr/share/takewic/testememoria.sh ; }
+voltar(){ . /usr/share/takewic/menu.sh ; }
 while : ; do
 
 # Mostra o menu na tela, com as ações disponíveis

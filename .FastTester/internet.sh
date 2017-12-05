@@ -1,6 +1,6 @@
 #!/bin/bash
 internet(){ clear ; speedtest-cli ; voltar ; }
-voltar(){ read -p "Pressione [enter] para voltar ao menu" ; /usr/share/takewic/internet.sh ; }
+voltar(){ . /usr/share/takewic/internet.sh ; }
 while : ; do
 resposta=$(
 dialog --stdout \
@@ -15,6 +15,6 @@ dialog --stdout \
 
 case $resposta in 
 	1) internet ;;
-	2) exit 0   ;;
+	2) voltar   ;;
 esac
 done

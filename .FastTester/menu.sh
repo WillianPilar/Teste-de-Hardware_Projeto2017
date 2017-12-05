@@ -1,10 +1,10 @@
 #!/bin/bash
 # Funções para chamar os outros scripts
-memoria(){ /usr/share/takewic/testememoria.sh ; }
-cpu(){ /usr/share/takewic/cpu.sh ; }
-hd(){ /usr/share/takewic/hdteste.sh ; }
-diagnostico(){ /usr/share/takewic/diagnostico.sh ; }
-internet(){ /usr/share/takewic/internet.sh ; }
+memoria(){ . /usr/share/takewic/testememoria.sh ; }
+cpu(){ . /usr/share/takewic/cpu.sh ; }
+hd(){ . /usr/share/takewic/hdteste.sh ; }
+diagnostico(){ . /usr/share/takewic/diagnostico.sh ; }
+internet(){ . /usr/share/takewic/internet.sh ; }
 while : ; do
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
