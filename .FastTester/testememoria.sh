@@ -1,7 +1,7 @@
 #!/bin/bash
 voltar(){ . /usr/share/takewic/menu.sh ; }
-teste(){ . /usr/share/takewic/escolha.sh ; }
-while : ; do
+teste(){ /usr/share/takewic/escolha.sh ; }
+
 
 OPZAO=$(
 dialog --stdout \
@@ -19,4 +19,4 @@ case $OPZAO in
 	2) voltar  ;;
 esac
 
-done
+

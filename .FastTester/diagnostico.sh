@@ -7,8 +7,7 @@ cpu(){ clear ; echo "Informações sobre o processador" ; head 19 /proc/cpuinfo 
 ram(){ clear ; echo "Informações sobre memória RAM" ; free -m ; echo ; voltar1 ;}
 hd(){ clear ; echo "Informações sobre o Hard Disk (HD)" ; df -h ; voltar1 ;}
 placa(){ clear ; echo "Informações sobre a placa mãe" ; lshw -class system ; voltar1 ; }
-voltar(){ ; }
-while : ; do
+sair(){ exit 0 ; clear ; }
 
 # Mostra o menu na tela, com as ações disponíveis
 resposta=$(
@@ -23,6 +22,7 @@ dialog --stdout \
 5 'Informações sobre o Hard Disk(HD)' \
 6 'Informações sobre a placa-mãe' \
 7 'Voltar ao menu' \
+8 'Sair' \
 )
 
 # Ela apertou CANCELAR ou ESC, então vamos sair...
@@ -37,7 +37,7 @@ case $resposta in
 	4) ram    ;;
 	5) hd     ;;
 	6) placa  ;;
-	7) voltar ;;
+	7) . /usr/share/takewic/menu.sh ;;
 esac
 
-done
+
